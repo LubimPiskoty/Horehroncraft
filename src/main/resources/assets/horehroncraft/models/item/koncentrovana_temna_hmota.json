@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "horehroncraft:item/koncentrovana_temna_hmota"
+    }
+}
