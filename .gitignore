@@ -27,3 +27,4 @@ forge*changelog.txt
 # VS Code
 .vscode
 
+.vscode/launch.json
