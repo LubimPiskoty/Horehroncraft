@@ -8,7 +8,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ModItems {
+public class ItemList {
     public static final DeferredRegister<Item> ITEMS =  
         DeferredRegister.create(ForgeRegistries.ITEMS, HorehronCraft.MOD_ID);
 
@@ -18,10 +18,10 @@ public class ModItems {
             () -> new Item(HOREHRONCRAFT_TAB));
 
     public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza", 
-            () -> new Item(HOREHRONCRAFT_TAB.food(ModFood.PIZZA)));
+            () -> new Item(HOREHRONCRAFT_TAB.food(FoodList.PIZZA)));
 
     public static final RegistryObject<Item> KEL = ITEMS.register("kel",
-            () -> new Item(HOREHRONCRAFT_TAB.food(ModFood.KEL)));
+            () -> new Item(HOREHRONCRAFT_TAB.food(FoodList.KEL)));
 
 
     public static void register(IEventBus eventBus){

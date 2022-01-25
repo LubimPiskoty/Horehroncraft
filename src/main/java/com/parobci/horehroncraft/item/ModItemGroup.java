@@ -9,7 +9,7 @@ public class ModItemGroup {
         @Override
         public ItemStack makeIcon()
         {
-            return new ItemStack(ModItems.TEMNA_HMOTA.get());
+            return new ItemStack(ItemList.TEMNA_HMOTA.get());
         }
     };
 }

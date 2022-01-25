@@ -2,6 +2,13 @@
     "item.horehroncraft.koncentrovana_temna_hmota": "Koncentrovana temná hmota",
     "item.horehroncraft.pizza": "Pica špica",
     "item.horehroncraft.kel": "Rúžičkový Kel",
+    
+    "effect.horehroncraft.kiahne_effect": "Kiahne",
+
+    "item.minecraft.potion.effect.kiahne_potion": "Kniahňový izolát",
+    "item.minecraft.splash_potion.effect.kiahne_potion": "Kniahňový izolát (šmykľavý)",
+    "item.minecraft.lingering_potion.effect.kiahne_potion": "Príchuť Kniahní",
+    "item.minecraft.tipped_arrow.effect.kiahne_potion": "Kiahňový šíp",
 
     "itemGroup.horehroncraftTab": "HorehronCraft"
 }
