@@ -15,7 +15,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> TEMNA_HMOTA = ITEMS.register("koncentrovana_temna_hmota", 
-        () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
+        () -> new Item(new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP)));
 
 
     public static void register(IEventBus eventBus){
