@@ -17,15 +17,23 @@ public class ItemList {
 
     public static final Item.Properties HOREHRONCRAFT_TAB = new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP);
 
+                // ITEMS
     public static final RegistryObject<Item> TEMNA_HMOTA = ITEMS.register("koncentrovana_temna_hmota", 
             () -> new Item(HOREHRONCRAFT_TAB));
 
+
+                // FOOD
     public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza", 
             () -> new Item(HOREHRONCRAFT_TAB.food(FoodList.PIZZA)));
 
     public static final RegistryObject<Item> KEL = ITEMS.register("kel",
             () -> new Item(HOREHRONCRAFT_TAB.food(FoodList.KEL)));
 
+    public static final RegistryObject<Item> OVOS = ITEMS.register("ovos",
+            () -> new Item(HOREHRONCRAFT_TAB.food(FoodList.OVOS)));
+
+
+                // ARMOR
     public static final RegistryObject<Item> DREVAKY = ITEMS.register("drevaky",
             () -> new ArmorItem(ArmorMaterials.DREVAKY, EquipmentSlotType.FEET, HOREHRONCRAFT_TAB));
 
