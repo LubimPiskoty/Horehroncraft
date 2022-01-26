@@ -2,13 +2,20 @@
     "item.horehroncraft.koncentrovana_temna_hmota": "Koncentrovana temná hmota",
     "item.horehroncraft.pizza": "Pica špica",
     "item.horehroncraft.kel": "Rúžičkový Kel",
+
+    "item.horehroncraft.drevaky": "Dreváky",
     
     "effect.horehroncraft.kiahne_effect": "Kiahne",
-
-    "item.minecraft.potion.effect.kiahne_potion": "Kniahňový izolát",
-    "item.minecraft.splash_potion.effect.kiahne_potion": "Kniahňový izolát (šmykľavý)",
+    "item.minecraft.potion.effect.kiahne_potion": "Kiahne vo flaške",
+    "item.minecraft.splash_potion.effect.kiahne_potion": "Kiahne vo flaške (splash)",
     "item.minecraft.lingering_potion.effect.kiahne_potion": "Príchuť Kniahní",
     "item.minecraft.tipped_arrow.effect.kiahne_potion": "Kiahňový šíp",
+
+    "effect.horehroncraft.tuberkuloza_effect": "Tuberkuloza",
+    "item.minecraft.potion.effect.tuberkuloza_potion": "Tuberkuloza vo flaške",
+    "item.minecraft.splash_potion.effect.tuberkuloza_potion": "Tuberkuloza vo flaške (splash)",
+    "item.minecraft.lingering_potion.effect.tuberkuloza_potion": "Príchuť Tuberkulozy",
+    "item.minecraft.tipped_arrow.effect.tuberkuloza_potion": "Tuberkulus-šípus",
 
     "itemGroup.horehroncraftTab": "HorehronCraft"
 }

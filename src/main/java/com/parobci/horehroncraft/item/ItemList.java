@@ -1,7 +1,10 @@
 package com.parobci.horehroncraft.item;
 
 import com.parobci.horehroncraft.HorehronCraft;
+import com.parobci.horehroncraft.item.custom.ArmorMaterials;
 
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -22,6 +25,9 @@ public class ItemList {
 
     public static final RegistryObject<Item> KEL = ITEMS.register("kel",
             () -> new Item(HOREHRONCRAFT_TAB.food(FoodList.KEL)));
+
+    public static final RegistryObject<Item> DREVAKY = ITEMS.register("drevaky",
+            () -> new ArmorItem(ArmorMaterials.DREVAKY, EquipmentSlotType.FEET, HOREHRONCRAFT_TAB));
 
 
     public static void register(IEventBus eventBus){

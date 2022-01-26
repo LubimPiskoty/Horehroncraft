@@ -1,9 +1,8 @@
 package com.parobci.horehroncraft.item;
 
 import com.parobci.horehroncraft.HorehronCraft;
-import com.parobci.horehroncraft.item.custom.Kiahne;
+import com.parobci.horehroncraft.item.custom.PotionEffects;
 
-import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.EffectType;
@@ -21,11 +20,16 @@ public class PotionList {
     
     // EFFECTS
     public static final RegistryObject<Effect> KIAHNE_EFFECT = EFFECTS.register("kiahne_effect", 
-            () -> new Kiahne.KiahneEffect(EffectType.HARMFUL, 0xEAEA00));
+            () -> new PotionEffects.KiahneEffect(EffectType.HARMFUL, 0xEAEA00));
             
+    public static final RegistryObject<Effect> TUBERKULOZA_EFFECT = EFFECTS.register("tuberkuloza_effect", 
+            () -> new PotionEffects.TuberkulozaEffect(EffectType.HARMFUL, 0xA80000));
     // POTIONS
     public static final RegistryObject<Potion> KIAHNE_POTION = POTIONS.register("kiahne_potion", 
-            () -> new Potion(new EffectInstance(KIAHNE_EFFECT.get(), 3600)));
+            () -> new Potion(new EffectInstance(KIAHNE_EFFECT.get(), 1200)));
+
+    public static final RegistryObject<Potion> TUBERKULOZA_POTION = POTIONS.register("tuberkuloza_potion", 
+            () -> new Potion(new EffectInstance(TUBERKULOZA_EFFECT.get(), 600)));
 
 
     public static void register(IEventBus eventBus) {

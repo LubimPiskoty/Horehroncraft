@@ -1,11 +1,13 @@
 package com.parobci.horehroncraft.item.custom;
 
+import java.util.Random;
+
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectType;
 import net.minecraft.util.DamageSource;
 
-public class Kiahne {
+public class PotionEffects {
     
     public static class KiahneEffect extends Effect{
 
@@ -22,7 +24,26 @@ public class Kiahne {
 
         @Override
         public boolean isDurationEffectTick(int duration, int amplifier){
-            return duration % 10 == 0;
+            return duration % 25 == 0;
+        }
+
+    }
+
+    public static class TuberkulozaEffect extends Effect{
+
+        public TuberkulozaEffect(EffectType typeIn, int liquidColorIn) {
+            super(typeIn, liquidColorIn);
+        }
+
+        @Override
+        public void applyEffectTick(LivingEntity entity, int amplifier) {
+            float damage = (new Random().nextFloat()+amplifier) * 1f;
+            entity.hurt(DamageSource.DROWN, damage);
+        }
+
+        @Override
+        public boolean isDurationEffectTick(int duration, int amplifier){
+            return duration % 40 == 0;
         }
 
     }
