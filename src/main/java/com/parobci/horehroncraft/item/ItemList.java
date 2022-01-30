@@ -33,6 +33,9 @@ public class ItemList {
     public static final RegistryObject<Item> OVOS = ITEMS.register("ovos",
             () -> new Item(HOREHRONCRAFT_TAB.food(FoodList.OVOS)));
 
+    public static final RegistryObject<Item> VAZELINA = ITEMS.register("vazelina",
+            () -> new Item(HOREHRONCRAFT_TAB.food(FoodList.VAZELINA)));
+
 
                 // ARMOR
     public static final RegistryObject<Item> DREVAKY = ITEMS.register("drevaky",
