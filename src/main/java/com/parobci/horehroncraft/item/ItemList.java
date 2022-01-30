@@ -1,11 +1,12 @@
 package com.parobci.horehroncraft.item;
 
 import com.parobci.horehroncraft.HorehronCraft;
-import com.parobci.horehroncraft.item.custom.ArmorMaterials;
+import com.parobci.horehroncraft.item.custom.Cepin;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -37,6 +38,10 @@ public class ItemList {
     public static final RegistryObject<Item> DREVAKY = ITEMS.register("drevaky",
             () -> new ArmorItem(ArmorMaterials.DREVAKY, EquipmentSlotType.FEET, HOREHRONCRAFT_TAB));
 
+                // Tools
+                //TODO: Adjust harverst level
+    public static final RegistryObject<Item> CEPIN = ITEMS.register("cepin",
+            () -> new Cepin(4f, -2f, ToolMaterials.CEPIN, HOREHRONCRAFT_TAB));       
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

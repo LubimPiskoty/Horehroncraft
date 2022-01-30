@@ -1,7 +1,6 @@
 package com.parobci.horehroncraft.item;
 
 import com.parobci.horehroncraft.HorehronCraft;
-import com.parobci.horehroncraft.item.custom.PotionEffects;
 
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
