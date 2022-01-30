@@ -1,4 +1,4 @@
-package com.parobci.horehroncraft.item;
+package com.parobci.horehroncraft.armor;
 
 import java.util.function.Supplier;
 

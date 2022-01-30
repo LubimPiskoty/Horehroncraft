@@ -1,7 +1,10 @@
 package com.parobci.horehroncraft.item;
 
 import com.parobci.horehroncraft.HorehronCraft;
+import com.parobci.horehroncraft.armor.ArmorMaterials;
+import com.parobci.horehroncraft.entity.EntityList;
 import com.parobci.horehroncraft.item.custom.Cepin;
+import com.parobci.horehroncraft.item.custom.RomakSpawnEgg;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -48,6 +51,10 @@ public class ItemList {
                 //TODO: Adjust harverst level
     public static final RegistryObject<Item> CEPIN = ITEMS.register("cepin",
             () -> new Cepin(2.5f, -3f, ToolMaterials.CEPIN, HOREHRONCRAFT_TAB));       
+
+                //Spawn Eggs
+    // public static final RegistryObject<Item> ROMAK_SPAWN_EGG = ITEMS.register("romak_spawn_egg", 
+    //         () -> new RomakSpawnEgg(EntityList.ROMAK, 0x5B402B,0x302F28, HOREHRONCRAFT_TAB.stacksTo(1)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

@@ -1,4 +1,4 @@
-package com.parobci.horehroncraft.item;
+package com.parobci.horehroncraft.potions;
 
 import java.util.Random;
 

@@ -26,8 +26,9 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.stream.Collectors;
 
+import com.parobci.horehroncraft.entity.EntityList;
 import com.parobci.horehroncraft.item.ItemList;
-import com.parobci.horehroncraft.item.PotionList;
+import com.parobci.horehroncraft.potions.PotionList;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HorehronCraft.MOD_ID)
@@ -44,6 +45,7 @@ public class HorehronCraft
 
         ItemList.register(eventBus);
         PotionList.register(eventBus);
+        EntityList.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
