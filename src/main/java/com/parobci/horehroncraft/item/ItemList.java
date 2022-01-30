@@ -41,7 +41,7 @@ public class ItemList {
                 // Tools
                 //TODO: Adjust harverst level
     public static final RegistryObject<Item> CEPIN = ITEMS.register("cepin",
-            () -> new Cepin(4f, -2f, ToolMaterials.CEPIN, HOREHRONCRAFT_TAB));       
+            () -> new Cepin(2.5f, -3f, ToolMaterials.CEPIN, HOREHRONCRAFT_TAB));       
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        " K ",
+        "   "
+    ],
+    "key": {
+        "K": {
+            "item": "minecraft:iron_pickaxe"
+        },
+        "#": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "horehroncraft:cepin"
+    }
+}
