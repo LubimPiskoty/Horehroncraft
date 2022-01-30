@@ -22,6 +22,9 @@ public class ItemList {
     public static final RegistryObject<Item> TEMNA_HMOTA = ITEMS.register("koncentrovana_temna_hmota", 
             () -> new Item(HOREHRONCRAFT_TAB));
 
+    public static final RegistryObject<Item> KLUC = ITEMS.register("kluc", 
+            () -> new Item(HOREHRONCRAFT_TAB));
+
 
                 // FOOD
     public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza", 

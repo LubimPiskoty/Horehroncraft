@@ -1,5 +1,8 @@
 {
     "item.horehroncraft.koncentrovana_temna_hmota": "Koncentrovana temná hmota",
+    "item.horehroncraft.kluc": "Kľúč od domu",
+
+
     "item.horehroncraft.pizza": "Pica špica",
     "item.horehroncraft.kel": "Rúžičkový Kel",
     "item.horehroncraft.ovos": "Ovos",
@@ -8,6 +11,9 @@
     "item.horehroncraft.drevaky": "Dreváky",
     "item.horehroncraft.cepin": "Cepín",
     
+
+
+
     "effect.horehroncraft.kiahne_effect": "Kiahne",
     "item.minecraft.potion.effect.kiahne_potion": "Kiahne vo flaške",
     "item.minecraft.splash_potion.effect.kiahne_potion": "Kiahne vo flaške (splash)",
