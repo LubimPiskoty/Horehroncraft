@@ -9,7 +9,7 @@ import net.minecraft.util.LazyValue;
 
 public enum ToolMaterials implements IItemTier{
     
-    CEPIN(2, 1000, 6.0f, 2.5f, 14, () -> {
+    CEP(2, 1000, 6.0f, 2.5f, 14, () -> {
         return Ingredient.of(Items.IRON_INGOT);
     });
 

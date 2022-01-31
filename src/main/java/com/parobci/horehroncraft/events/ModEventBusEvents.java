@@ -4,7 +4,6 @@ import com.parobci.horehroncraft.HorehronCraft;
 import com.parobci.horehroncraft.entity.EntityList;
 import com.parobci.horehroncraft.entity.custom.RomakEntity;
 import com.parobci.horehroncraft.entity.render.RomakRenderer;
-import com.parobci.horehroncraft.item.custom.RomakSpawnEgg;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;

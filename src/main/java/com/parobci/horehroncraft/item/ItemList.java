@@ -3,13 +3,13 @@ package com.parobci.horehroncraft.item;
 import com.parobci.horehroncraft.HorehronCraft;
 import com.parobci.horehroncraft.armor.ArmorMaterials;
 import com.parobci.horehroncraft.entity.EntityList;
-import com.parobci.horehroncraft.item.custom.Cepin;
-import com.parobci.horehroncraft.item.custom.RomakSpawnEgg;
+import com.parobci.horehroncraft.item.custom.Cep;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,7 +26,7 @@ public class ItemList {
             () -> new Item(HOREHRONCRAFT_TAB));
 
     public static final RegistryObject<Item> KLUC = ITEMS.register("kluc", 
-            () -> new Item(HOREHRONCRAFT_TAB));
+            () -> new Item(HOREHRONCRAFT_TAB.stacksTo(1)));
 
 
                 // FOOD
@@ -49,12 +49,12 @@ public class ItemList {
 
                 // Tools
                 //TODO: Adjust harverst level
-    public static final RegistryObject<Item> CEPIN = ITEMS.register("cepin",
-            () -> new Cepin(2.5f, -3f, ToolMaterials.CEPIN, HOREHRONCRAFT_TAB));       
+    public static final RegistryObject<Item> CEP = ITEMS.register("cep",
+            () -> new Cep(2.5f, -3f, ToolMaterials.CEP, HOREHRONCRAFT_TAB));       
 
                 //Spawn Eggs
-    // public static final RegistryObject<Item> ROMAK_SPAWN_EGG = ITEMS.register("romak_spawn_egg", 
-    //         () -> new RomakSpawnEgg(EntityList.ROMAK, 0x5B402B,0x302F28, HOREHRONCRAFT_TAB.stacksTo(1)));
+    public static final RegistryObject<ForgeSpawnEggItem> ROMAK_SPAWN_EGG = ITEMS.register("romak_spawn_egg", 
+            () -> new ForgeSpawnEggItem(EntityList.ROMAK, 0x5B402B,0x302F28, HOREHRONCRAFT_TAB));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

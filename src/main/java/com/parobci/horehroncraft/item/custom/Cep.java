@@ -32,7 +32,7 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class Cepin extends ToolItem {
+public class Cep extends ToolItem {
 
     private static final Set<Block> DIGGABLE_BLOCKS = ImmutableSet.of(Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE,
             Blocks.COBBLESTONE, Blocks.DETECTOR_RAIL, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, Blocks.POWERED_RAIL,
@@ -67,7 +67,7 @@ public class Cepin extends ToolItem {
     protected static final Map<Block, BlockState> FLATTENABLES = Maps
             .newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Blocks.GRASS_PATH.defaultBlockState()));
             
-    public Cepin(float attackDamageIn, float attackSpeedIn, IItemTier tier, Properties builder) {
+    public Cep(float attackDamageIn, float attackSpeedIn, IItemTier tier, Properties builder) {
         super(attackDamageIn, attackSpeedIn, tier, DIGGABLE_BLOCKS, builder);
     }
 
