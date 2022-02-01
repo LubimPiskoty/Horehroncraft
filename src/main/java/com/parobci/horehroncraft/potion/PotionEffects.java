@@ -1,4 +1,4 @@
-package com.parobci.horehroncraft.potions;
+package com.parobci.horehroncraft.potion;
 
 import java.util.Random;
 
@@ -46,5 +46,23 @@ public class PotionEffects {
             return duration % 40 == 0;
         }
 
+    }
+
+    public static class CholeraEffect extends Effect {
+        
+        public CholeraEffect(EffectType typeIn, int liquidColorIn){
+            super(typeIn, liquidColorIn);
+        }
+
+        @Override
+        public void applyEffectTick(LivingEntity entity, int amplifier) {
+            float damage = (new Random().nextFloat() + amplifier) * 1f;
+            entity.hurt(DamageSource.DROWN, damage);
+        }
+
+        @Override
+        public boolean isDurationEffectTick(int duration, int amplifier) {
+            return duration % 40 == 0;
+        }
     }
 }

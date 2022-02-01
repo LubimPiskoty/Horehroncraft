@@ -1,4 +1,4 @@
-package com.parobci.horehroncraft.potions;
+package com.parobci.horehroncraft.potion;
 
 import com.parobci.horehroncraft.HorehronCraft;
 

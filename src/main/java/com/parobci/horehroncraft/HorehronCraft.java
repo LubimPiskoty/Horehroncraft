@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 
 import com.parobci.horehroncraft.entity.EntityList;
 import com.parobci.horehroncraft.item.ItemList;
-import com.parobci.horehroncraft.potions.PotionList;
+import com.parobci.horehroncraft.potion.PotionList;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HorehronCraft.MOD_ID)

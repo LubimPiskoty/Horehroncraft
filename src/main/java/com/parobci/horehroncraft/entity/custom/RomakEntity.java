@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-import com.parobci.horehroncraft.potions.PotionList;
+import com.parobci.horehroncraft.potion.PotionList;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityPredicate;
@@ -36,11 +36,13 @@ import net.minecraft.world.World;
 
 public class RomakEntity extends ZombieEntity {
 
-    public static final List<Effect> CHOROBY = 
-            Arrays.asList(PotionList.KIAHNE_EFFECT.get(), PotionList.TUBERKULOZA_EFFECT.get());
+    public static final List<Effect> CHOROBY = Arrays.asList(PotionList.KIAHNE_EFFECT.get(),
+            PotionList.TUBERKULOZA_EFFECT.get());
 
-    public static List<Item> IRON_ITEMS = Arrays.asList(Items.IRON_AXE, Items.IRON_HELMET, Items.IRON_INGOT);
-    
+    // TODO: Add more Iron items
+    public static List<Item> IRON_ITEMS =
+    Arrays.asList(Items.IRON_AXE,Items.IRON_BARS,Items.IRON_BLOCK,Items.IRON_BOOTS,Items.IRON_CHESTPLATE,Items.IRON_DOOR,Items.IRON_HELMET,Items.IRON_HOE,Items.IRON_HORSE_ARMOR,Items.IRON_INGOT,Items.IRON_LEGGINGS,Items.IRON_NUGGET,Items.IRON_ORE,Items.IRON_PICKAXE,Items.IRON_SHOVEL,Items.IRON_SWORD,Items.IRON_TRAPDOOR);
+
     public static final Predicate<LivingEntity> HAS_IRON_PREDICATE = (entity) -> {
         Iterable<ItemStack> armor = entity.getArmorSlots();
 
@@ -54,9 +56,11 @@ public class RomakEntity extends ZombieEntity {
                 return true;
             }
         }
-        if(entity.getMainHandItem().getDisplayName().toString().contains("Iron")) return true;
+        if (entity.getMainHandItem().getDisplayName().toString().contains("Iron"))
+            return true;
         return false;
     };
+
     public RomakEntity(EntityType<? extends ZombieEntity> type, World worldIn) {
         super(type, worldIn);
     }
@@ -71,7 +75,6 @@ public class RomakEntity extends ZombieEntity {
     }
 
     protected void registerGoals() {
-        //TODO: Add attack if iron present goal
         this.goalSelector.addGoal(2, new ZombieAttackGoal(this, 1.0D, false));
         this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 16.0F));
         this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
@@ -79,14 +82,15 @@ public class RomakEntity extends ZombieEntity {
         this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(ZombifiedPiglinEntity.class));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 1, true, false, HAS_IRON_PREDICATE));
-    }   
+        this.targetSelector.addGoal(1,
+                new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 1, true, false, HAS_IRON_PREDICATE));
+    }
 
     protected boolean isSunSensitive() {
         return false;
     }
 
-    protected int getExperienceReward(PlayerEntity player){
+    protected int getExperienceReward(PlayerEntity player) {
         return 5 + this.level.random.nextInt(5);
     }
 
@@ -94,8 +98,8 @@ public class RomakEntity extends ZombieEntity {
         boolean flag = super.doHurtTarget(entityIn);
         if (flag && entityIn instanceof LivingEntity) {
             Effect choroba = CHOROBY.get(entityIn.level.random.nextInt(CHOROBY.size()));
-            if(entityIn.level.random.nextInt(10) == 1){
-                ((LivingEntity)entityIn).addEffect(new EffectInstance(choroba, 160));
+            if (entityIn.level.random.nextInt(10) == 1) {
+                ((LivingEntity) entityIn).addEffect(new EffectInstance(choroba, 160));
             }
         }
 
@@ -105,11 +109,11 @@ public class RomakEntity extends ZombieEntity {
     protected SoundEvent getAmbientSound() {
         return SoundEvents.ZOMBIE_AMBIENT;
     }
-    
+
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return SoundEvents.ZOMBIE_HURT;
     }
-    
+
     protected SoundEvent getDeathSound() {
         return SoundEvents.ZOMBIE_DEATH;
     }
