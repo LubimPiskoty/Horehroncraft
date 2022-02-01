@@ -37,9 +37,8 @@ import net.minecraft.world.World;
 public class RomakEntity extends ZombieEntity {
 
     public static final List<Effect> CHOROBY = Arrays.asList(PotionList.KIAHNE_EFFECT.get(),
-            PotionList.TUBERKULOZA_EFFECT.get());
+            PotionList.TUBERKULOZA_EFFECT.get(), PotionList.CHOLERA_EFFECT.get());
 
-    // TODO: Add more Iron items
     public static List<Item> IRON_ITEMS =
     Arrays.asList(Items.IRON_AXE,Items.IRON_BARS,Items.IRON_BLOCK,Items.IRON_BOOTS,Items.IRON_CHESTPLATE,Items.IRON_DOOR,Items.IRON_HELMET,Items.IRON_HOE,Items.IRON_HORSE_ARMOR,Items.IRON_INGOT,Items.IRON_LEGGINGS,Items.IRON_NUGGET,Items.IRON_ORE,Items.IRON_PICKAXE,Items.IRON_SHOVEL,Items.IRON_SWORD,Items.IRON_TRAPDOOR);
 
@@ -98,7 +97,7 @@ public class RomakEntity extends ZombieEntity {
         boolean flag = super.doHurtTarget(entityIn);
         if (flag && entityIn instanceof LivingEntity) {
             Effect choroba = CHOROBY.get(entityIn.level.random.nextInt(CHOROBY.size()));
-            if (entityIn.level.random.nextInt(10) == 1) {
+            if (entityIn.level.random.nextInt(5) == 1) {
                 ((LivingEntity) entityIn).addEffect(new EffectInstance(choroba, 160));
             }
         }

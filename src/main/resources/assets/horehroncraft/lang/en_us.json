@@ -29,5 +29,11 @@
     "item.minecraft.lingering_potion.effect.tuberkuloza_potion": "Príchuť Tuberkulozy",
     "item.minecraft.tipped_arrow.effect.tuberkuloza_potion": "Tuberkulus-šípus",
 
+    "effect.horehroncraft.cholera_effect": "Cholera",
+    "item.minecraft.potion.effect.cholera_potion": "Cholera vo flaške",
+    "item.minecraft.splash_potion.effect.cholera_potion": "Cholera vo flaške (splash)",
+    "item.minecraft.lingering_potion.effect.cholera_potion": "Príchuť Cholery",
+    "item.minecraft.tipped_arrow.effect.cholera_potion": "Choleros-šípos",
+
     "itemGroup.horehroncraftTab": "HorehronCraft"
 }

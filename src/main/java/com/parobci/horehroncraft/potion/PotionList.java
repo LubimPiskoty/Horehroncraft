@@ -23,12 +23,19 @@ public class PotionList {
             
     public static final RegistryObject<Effect> TUBERKULOZA_EFFECT = EFFECTS.register("tuberkuloza_effect", 
             () -> new PotionEffects.TuberkulozaEffect(EffectType.HARMFUL, 0xA80000));
+
+    public static final RegistryObject<Effect> CHOLERA_EFFECT = EFFECTS.register("cholera_effect", 
+            () -> new PotionEffects.CholeraEffect(EffectType.HARMFUL, 0x9900E5));
+
     // POTIONS
     public static final RegistryObject<Potion> KIAHNE_POTION = POTIONS.register("kiahne_potion", 
             () -> new Potion(new EffectInstance(KIAHNE_EFFECT.get(), 1200)));
 
     public static final RegistryObject<Potion> TUBERKULOZA_POTION = POTIONS.register("tuberkuloza_potion", 
             () -> new Potion(new EffectInstance(TUBERKULOZA_EFFECT.get(), 600)));
+
+    public static final RegistryObject<Potion> CHOLERA_EPOTION = POTIONS.register("cholera_potion", 
+            () -> new Potion(new EffectInstance(CHOLERA_EFFECT.get(), 800)));
 
 
     public static void register(IEventBus eventBus) {
