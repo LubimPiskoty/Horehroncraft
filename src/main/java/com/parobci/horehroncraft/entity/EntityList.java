@@ -18,7 +18,7 @@ public class EntityList {
 
     public static final RegistryObject<EntityType<RomakEntity>> ROMAK = ENTITY_TYPES.register("romak", 
     () -> EntityType.Builder.<RomakEntity>of(RomakEntity::new, EntityClassification.MONSTER).sized(1.0F, 2.5F)
-            .build(new ResourceLocation(HorehronCraft.MOD_ID, "romak").toString()));</RomakEntity>
+            .build(new ResourceLocation(HorehronCraft.MOD_ID, "romak").toString()));
 
 
     public static void register(IEventBus bus){
