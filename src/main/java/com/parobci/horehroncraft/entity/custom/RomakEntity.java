@@ -20,9 +20,11 @@ import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.ai.goal.ZombieAttackGoal;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.monster.ZombifiedPiglinEntity;
+import net.minecraft.entity.passive.FoxEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -66,8 +68,8 @@ public class RomakEntity extends ZombieEntity {
 
     public static AttributeModifierMap.MutableAttribute createAttributes() {
         return MonsterEntity.createMonsterAttributes()
-                .add(Attributes.FOLLOW_RANGE, 45.0D)
-                .add(Attributes.MOVEMENT_SPEED, (double) 0.6F)
+                .add(Attributes.FOLLOW_RANGE, 200.0D)
+                .add(Attributes.MOVEMENT_SPEED, (double) 0.5F)
                 .add(Attributes.ATTACK_DAMAGE, 1.5D)
                 .add(Attributes.ARMOR, 2.0D)
                 .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
@@ -81,8 +83,8 @@ public class RomakEntity extends ZombieEntity {
         this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(ZombifiedPiglinEntity.class));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
-        this.targetSelector.addGoal(1,
-                new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 1, true, false, HAS_IRON_PREDICATE));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 5, false, false, HAS_IRON_PREDICATE));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, FoxEntity.class, 20, false, false, HAS_IRON_PREDICATE));
     }
 
     protected boolean isSunSensitive() {
