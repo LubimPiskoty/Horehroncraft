@@ -66,9 +66,9 @@ public class RomakEntity extends ZombieEntity {
 
     public static AttributeModifierMap.MutableAttribute createAttributes() {
         return MonsterEntity.createMonsterAttributes()
-                .add(Attributes.FOLLOW_RANGE, 35.0D)
-                .add(Attributes.MOVEMENT_SPEED, (double) 0.23F)
-                .add(Attributes.ATTACK_DAMAGE, 1.8D)
+                .add(Attributes.FOLLOW_RANGE, 45.0D)
+                .add(Attributes.MOVEMENT_SPEED, (double) 0.6F)
+                .add(Attributes.ATTACK_DAMAGE, 1.5D)
                 .add(Attributes.ARMOR, 2.0D)
                 .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
     }
