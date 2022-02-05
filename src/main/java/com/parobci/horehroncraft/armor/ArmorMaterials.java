@@ -16,7 +16,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public enum ArmorMaterials implements IArmorMaterial {
     
-    DREVAKY("drevaky", 7, new int[] {2, 2, 2, 2}, 12, SoundEvents.ARMOR_EQUIP_LEATHER, 2.0f, 4.0f, () -> {
+    DREVAKY("drevaky", 7, new int[] {2, 2, 2, 2}, 12, SoundEvents.ARMOR_EQUIP_LEATHER, 2.0f, 0.1f, () -> {
         return Ingredient.of(Items.OAK_WOOD.getItem());
     }),;
 

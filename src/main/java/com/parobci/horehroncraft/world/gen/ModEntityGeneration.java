@@ -17,7 +17,7 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 public class ModEntityGeneration {
 
     public static void onEntitySpawn(final BiomeLoadingEvent event){
-        addEntityToAllBiomes(event.getSpawns(), EntityList.ROMAK.get(), 30, 2, 4);
+        addEntityToAllBiomes(event.getSpawns(), EntityList.ROMAK.get(), 25, 3, 12);
     }
 
     private static void addEntityToAllBiomeExceptThese(BiomeLoadingEvent event, EntityType<?> type, int weight, int minCount, int maxCount, RegistryKey<Biome>... biomes){

@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "horehroncraft:item/cepin"
+        "layer0": "horehroncraft:item/cep"
     }
 }

@@ -76,15 +76,16 @@ public class RomakEntity extends ZombieEntity {
 
     public static AttributeModifierMap.MutableAttribute setAttributes() {
         return MonsterEntity.createMonsterAttributes()
-                .add(Attributes.FOLLOW_RANGE, 200.0D)
-                .add(Attributes.MOVEMENT_SPEED, (double) 0.5F)
-                .add(Attributes.ATTACK_DAMAGE, 1.5D)
+                .add(Attributes.FOLLOW_RANGE, 120.0D)
+                .add(Attributes.MAX_HEALTH, 12.0f)
+                .add(Attributes.MOVEMENT_SPEED, (double) 0.58F)
+                .add(Attributes.ATTACK_DAMAGE, 4D)
                 .add(Attributes.ATTACK_SPEED, 0.2D)
-                .add(Attributes.ATTACK_KNOCKBACK, 2.0D)
-                .add(Attributes.ARMOR, 2.0D)
-                .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
+                .add(Attributes.ATTACK_KNOCKBACK, 1.5D)
+                .add(Attributes.ARMOR, 4.0D)
+                .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE, 1)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0)
-                .add(Attributes.JUMP_STRENGTH, 2);
+                .add(Attributes.JUMP_STRENGTH, 3);
     }
 
     protected void registerGoals() {
@@ -95,8 +96,8 @@ public class RomakEntity extends ZombieEntity {
         this.goalSelector.addGoal(6, new MoveThroughVillageGoal(this, 1.0D, true, 4, this::canBreakDoors));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(ZombifiedPiglinEntity.class));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, MestanEntity.class, false));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, MestanEntity.class, false));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 5, false, false, HAS_IRON_PREDICATE));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, FoxEntity.class, 20, false, false, HAS_IRON_PREDICATE));
     }
@@ -142,6 +143,6 @@ public class RomakEntity extends ZombieEntity {
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 1.2f;
+        return size.height * 0.95f;
     }
 }
