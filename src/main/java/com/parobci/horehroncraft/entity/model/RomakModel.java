@@ -23,11 +23,11 @@ public class RomakModel<T extends RomakEntity> extends EntityModel<T> {
 
 		left_arm = new ModelRenderer(this);
 		left_arm.setPos(-4.5F, 7.0F, 0.0F);
-		left_arm.texOffs(16, 0).addBox(-3.5F, 0.0F, -2.0F, 3.0F, 8.0F, 4.0F, 0.0F, true);
+		left_arm.texOffs(18, 0).addBox(-3.5F, 0.0F, -2.0F, 3.0F, 8.0F, 4.0F, 0.0F, true);
 
 		right_arm = new ModelRenderer(this);
 		right_arm.setPos(3.5F, 8.0F, 0.0F);
-		right_arm.texOffs(16, 0).addBox(1.5F, -1.0F, -2.0F, 3.0F, 8.0F, 4.0F, 0.0F, true);
+		right_arm.texOffs(18, 0).addBox(1.5F, -1.0F, -2.0F, 3.0F, 8.0F, 4.0F, 0.0F, true);
 
 		right_leg = new ModelRenderer(this);
 		right_leg.setPos(-3.0F, 17.0F, 0.0F);
