@@ -4,7 +4,9 @@ import javax.annotation.Nonnull;
 
 import com.parobci.horehroncraft.HorehronCraft;
 import com.parobci.horehroncraft.entity.EntityList;
+import com.parobci.horehroncraft.entity.custom.MalyClovekEntity;
 import com.parobci.horehroncraft.entity.custom.RomakEntity;
+import com.parobci.horehroncraft.entity.render.MalyClovekRenderer;
 import com.parobci.horehroncraft.entity.render.RomakRenderer;
 
 import net.minecraft.entity.EntityType;
@@ -25,11 +27,13 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event){
         RenderingRegistry.registerEntityRenderingHandler(EntityList.ROMAK.get(), RomakRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityList.MALY_MUZ.get(), MalyClovekRenderer::new);
     }
 
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(EntityList.ROMAK.get(), RomakEntity.createAttributes().build());
+        event.put(EntityList.MALY_MUZ.get(), MalyClovekEntity.createAttributes().build());
     }
 
     @SubscribeEvent

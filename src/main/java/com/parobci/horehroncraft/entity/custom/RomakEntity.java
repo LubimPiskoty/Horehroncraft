@@ -2,6 +2,7 @@ package com.parobci.horehroncraft.entity.custom;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.function.Predicate;
 
 import com.parobci.horehroncraft.HorehronCraft;
@@ -9,8 +10,10 @@ import com.parobci.horehroncraft.potion.PotionList;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityPredicate;
+import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
@@ -94,6 +97,10 @@ public class RomakEntity extends ZombieEntity {
         return false;
     }
 
+    protected boolean convertsInWater() {
+        return false;
+    }
+
     protected int getExperienceReward(PlayerEntity player) {
         return 5 + this.level.random.nextInt(5);
     }
@@ -126,4 +133,7 @@ public class RomakEntity extends ZombieEntity {
         return SoundEvents.ZOMBIE_STEP;
     }
 
+    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
+        return size.height * 1.2f;
+    }
 }

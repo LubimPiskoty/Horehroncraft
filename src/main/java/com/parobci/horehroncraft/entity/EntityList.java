@@ -2,6 +2,7 @@ package com.parobci.horehroncraft.entity;
 
 import com.google.common.base.Supplier;
 import com.parobci.horehroncraft.HorehronCraft;
+import com.parobci.horehroncraft.entity.custom.MalyClovekEntity;
 import com.parobci.horehroncraft.entity.custom.RomakEntity;
 
 import net.minecraft.entity.EntityClassification;
@@ -17,8 +18,13 @@ public class EntityList {
             = DeferredRegister.create(ForgeRegistries.ENTITIES, HorehronCraft.MOD_ID);    
 
     public static final RegistryObject<EntityType<RomakEntity>> ROMAK = ENTITY_TYPES.register("romak", 
-    () -> EntityType.Builder.<RomakEntity>of(RomakEntity::new, EntityClassification.MONSTER).sized(1.0F, 2.0F)
+    () -> EntityType.Builder.<RomakEntity>of(RomakEntity::new, EntityClassification.MONSTER).sized(1.0F, 1.5F)
             .build(new ResourceLocation(HorehronCraft.MOD_ID, "romak").toString()));
+
+    public static final RegistryObject<EntityType<MalyClovekEntity>> MALY_MUZ = ENTITY_TYPES.register("maly_clovek0", 
+    () -> EntityType.Builder.<MalyClovekEntity>of(
+                    MalyClovekEntity::new, EntityClassification.AMBIENT).sized(1.0F, 1.0F)
+            .build(new ResourceLocation(HorehronCraft.MOD_ID, "maly_clovek0").toString()));
 
 
     public static void register(IEventBus bus){

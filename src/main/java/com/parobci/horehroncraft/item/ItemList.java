@@ -55,6 +55,10 @@ public class ItemList {
             () -> new ForgeSpawnEggItem(EntityList.ROMAK, 0x5B402B, 0x302F28,
                     new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP)));
 
+    public static final RegistryObject<ForgeSpawnEggItem> MALY_CLOVEK_SPAWN_EGG = ITEMS.register("maly_clovek_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityList.MALY_MUZ, 0xFFFFFF, 0x558EC3,
+                    new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
