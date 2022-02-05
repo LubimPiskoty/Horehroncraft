@@ -14,6 +14,7 @@ import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Pose;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
@@ -21,6 +22,7 @@ import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.MoveThroughVillageGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
+import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.ai.goal.ZombieAttackGoal;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
@@ -72,16 +74,21 @@ public class RomakEntity extends ZombieEntity {
         super(type, worldIn);
     }
 
-    public static AttributeModifierMap.MutableAttribute createAttributes() {
+    public static AttributeModifierMap.MutableAttribute setAttributes() {
         return MonsterEntity.createMonsterAttributes()
                 .add(Attributes.FOLLOW_RANGE, 200.0D)
                 .add(Attributes.MOVEMENT_SPEED, (double) 0.5F)
                 .add(Attributes.ATTACK_DAMAGE, 1.5D)
+                .add(Attributes.ATTACK_SPEED, 0.2D)
+                .add(Attributes.ATTACK_KNOCKBACK, 2.0D)
                 .add(Attributes.ARMOR, 2.0D)
-                .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
+                .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 0)
+                .add(Attributes.JUMP_STRENGTH, 2);
     }
 
     protected void registerGoals() {
+        this.goalSelector.addGoal(1, new SwimGoal(this));
         this.goalSelector.addGoal(2, new ZombieAttackGoal(this, 1.0D, false));
         this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 16.0F));
         this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
@@ -89,6 +96,7 @@ public class RomakEntity extends ZombieEntity {
         this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(ZombifiedPiglinEntity.class));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, MestanEntity.class, false));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 5, false, false, HAS_IRON_PREDICATE));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, FoxEntity.class, 20, false, false, HAS_IRON_PREDICATE));
     }

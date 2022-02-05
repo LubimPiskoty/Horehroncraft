@@ -2,7 +2,7 @@ package com.parobci.horehroncraft.entity.model;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
-import com.parobci.horehroncraft.entity.custom.MalyClovekEntity;
+import com.parobci.horehroncraft.entity.custom.MestanEntity;
 
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -13,7 +13,7 @@ import net.minecraft.util.math.MathHelper;
 // Paste this class into your mod and generate all required imports
 
 
-public class MalyClovekModel <T extends MalyClovekEntity> extends EntityModel<T>{
+public class MestanModel <T extends MestanEntity> extends EntityModel<T>{
 	private final ModelRenderer hand_left;
 	private final ModelRenderer hand_rigth;
 	private final ModelRenderer head;
@@ -21,17 +21,17 @@ public class MalyClovekModel <T extends MalyClovekEntity> extends EntityModel<T>
 	private final ModelRenderer leg_left;
 	private final ModelRenderer leg_rigth;
 
-	public MalyClovekModel() {
+	public MestanModel() {
 		texWidth = 64;
 		texHeight = 64;
 
 		hand_left = new ModelRenderer(this);
-		hand_left.setPos(0.0F, 24.0F, 0.0F);
-		hand_left.texOffs(26, 29).addBox(4.0F, -18.0F, -2.0F, 3.0F, 10.0F, 3.0F, 0.0F, false);
+		hand_left.setPos(5.5F, 7.0F, -0.5F);
+		hand_left.texOffs(26, 29).addBox(-1.5F, -1.0F, -1.5F, 3.0F, 10.0F, 3.0F, 0.0F, false);
 
 		hand_rigth = new ModelRenderer(this);
-		hand_rigth.setPos(-4.5F, 7.0F, -0.5F);
-		hand_rigth.texOffs(14, 29).addBox(-2.5F, -1.0F, -1.5F, 3.0F, 10.0F, 3.0F, 0.0F, false);
+		hand_rigth.setPos(-5.5F, 7.0F, -0.5F);
+		hand_rigth.texOffs(14, 29).addBox(-1.5F, -1.0F, -1.5F, 3.0F, 10.0F, 3.0F, 0.0F, false);
 
 		head = new ModelRenderer(this);
 		head.setPos(0.0F, 6.0F, -0.5F);
@@ -59,8 +59,8 @@ public class MalyClovekModel <T extends MalyClovekEntity> extends EntityModel<T>
 		this.leg_rigth.xRot = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
 		this.leg_left.xRot = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 
-		this.hand_left.xRot = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
-		this.hand_left.xRot = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+		this.hand_left.xRot = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.hand_rigth.xRot = MathHelper.cos(limbSwing * 0.6662F) * limbSwingAmount;
 	}
 
 	@Override
