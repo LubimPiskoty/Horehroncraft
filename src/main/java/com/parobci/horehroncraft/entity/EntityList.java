@@ -18,7 +18,7 @@ public class EntityList {
             = DeferredRegister.create(ForgeRegistries.ENTITIES, HorehronCraft.MOD_ID);    
 
     public static final RegistryObject<EntityType<RomakEntity>> ROMAK = ENTITY_TYPES.register("romak", 
-    () -> EntityType.Builder.<RomakEntity>of(RomakEntity::new, EntityClassification.MONSTER).sized(1.0F, 1.5F)
+    () -> EntityType.Builder.<RomakEntity>of(RomakEntity::new, EntityClassification.MONSTER).sized(0.75F, 1.35F)
             .build(new ResourceLocation(HorehronCraft.MOD_ID, "romak").toString()));
 
     public static final RegistryObject<EntityType<MestanEntity>> MESTAN_0 = ENTITY_TYPES.register("mestan0", 

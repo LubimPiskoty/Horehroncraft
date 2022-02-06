@@ -19,14 +19,14 @@ public class ItemList {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
             HorehronCraft.MOD_ID);
 
-    // ITEMS
+    //? ITEMS
     public static final RegistryObject<Item> TEMNA_HMOTA = ITEMS.register("koncentrovana_temna_hmota",
             () -> new Item(new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP)));
 
     public static final RegistryObject<Item> KLUC = ITEMS.register("kluc",
             () -> new Item(new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP).stacksTo(1)));
 
-    // FOOD
+    //? FOOD
     public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza",
             () -> new Item(new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP).food(FoodList.PIZZA)));
 
@@ -39,23 +39,22 @@ public class ItemList {
     public static final RegistryObject<Item> VAZELINA = ITEMS.register("vazelina",
             () -> new Item(new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP).food(FoodList.VAZELINA)));
 
-    // ARMOR
+    //? ARMOR
     public static final RegistryObject<Item> DREVAKY = ITEMS.register("drevaky",
             () -> new ArmorItem(ArmorMaterials.DREVAKY, EquipmentSlotType.FEET,
                     new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP)));
 
-    // Tools
-    // TODO: Adjust harverst level
+    //? Tools
     public static final RegistryObject<Item> CEP = ITEMS.register("cep",
             () -> new Cep(2.5f, -3f, ToolMaterials.CEP,
                     new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP)));
 
-    // Spawn Eggs
+    //? Spawn Eggs
     public static final RegistryObject<ForgeSpawnEggItem> ROMAK_SPAWN_EGG = ITEMS.register("romak_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityList.ROMAK, 0x5B402B, 0x302F28,
                     new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP)));
 
-    public static final RegistryObject<ForgeSpawnEggItem> MALY_CLOVEK_SPAWN_EGG = ITEMS.register("mestan_spawn_egg",
+    public static final RegistryObject<ForgeSpawnEggItem> MESTAN_SPAWN_EGG = ITEMS.register("mestan_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityList.MESTAN_0, 0xFFFFFF, 0x558EC3,
                     new Item.Properties().tab(ModItemGroup.HOREHRONCRAFT_GROUP)));
 

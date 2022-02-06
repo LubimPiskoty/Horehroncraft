@@ -62,15 +62,16 @@ public class HorehronCraft
     /* The FMLCommonSetupEvent (FML - Forge Mod Loader) */
     private void setup(final FMLCommonSetupEvent event) {
 
-        BrewingRecipeRegistry.addRecipe(
-                Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.AWKWARD)),
-                Ingredient.of(Items.ROTTEN_FLESH.getItem()),
-                PotionUtils.setPotion(new ItemStack(Items.POTION), PotionList.KIAHNE_POTION.get()));
+        //? BREWING POTIONS
+        // BrewingRecipeRegistry.addRecipe(
+        //         Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.AWKWARD)),
+        //         Ingredient.of(Items.ROTTEN_FLESH.getItem()),
+        //         PotionUtils.setPotion(new ItemStack(Items.POTION), PotionList.KIAHNE_POTION.get()));
 
-        BrewingRecipeRegistry.addRecipe(
-                Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.AWKWARD)),
-                Ingredient.of(ItemList.KEL.get()),
-                PotionUtils.setPotion(new ItemStack(Items.POTION), PotionList.TUBERKULOZA_POTION.get()));
+        // BrewingRecipeRegistry.addRecipe(
+        //         Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.AWKWARD)),
+        //         Ingredient.of(ItemList.KEL.get()),
+        //         PotionUtils.setPotion(new ItemStack(Items.POTION), PotionList.TUBERKULOZA_POTION.get()));
 
     }
 
