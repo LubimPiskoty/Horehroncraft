@@ -30,8 +30,8 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 
 import net.minecraft.world.gen.feature.structure.Structure.IStartFactory;
 
-public class ChatrcStructure extends Structure<NoFeatureConfig> {
-    public ChatrcStructure(Codec<NoFeatureConfig> codec) {
+public class OsadaStructure extends Structure<NoFeatureConfig> {
+    public OsadaStructure(Codec<NoFeatureConfig> codec) {
         super(codec);
     }
 
@@ -41,7 +41,7 @@ public class ChatrcStructure extends Structure<NoFeatureConfig> {
      */
     @Override
     public IStartFactory<NoFeatureConfig> getStartFactory() {
-        return ChatrcStructure.Start::new;
+        return OsadaStructure.Start::new;
     }
 
     /**
@@ -84,25 +84,26 @@ public class ChatrcStructure extends Structure<NoFeatureConfig> {
      * have to manually implement spawning for them. Stick with Forge's Default form
      * as it is easier to use that.
      */
-    //! MONSTER AND MOB SPAWNING
-    // private static final List<MobSpawnInfo.Spawners> STRUCTURE_MONSTERS = ImmutableList.of(
-    //         new MobSpawnInfo.Spawners(EntityType.ILLUSIONER, 100, 4, 9),
-    //         new MobSpawnInfo.Spawners(EntityType.VINDICATOR, 100, 4, 9));
+    // ! MONSTER AND MOB SPAWNING
+    // private static final List<MobSpawnInfo.Spawners> STRUCTURE_MONSTERS =
+    // ImmutableList.of(
+    // new MobSpawnInfo.Spawners(EntityType.ILLUSIONER, 100, 4, 9),
+    // new MobSpawnInfo.Spawners(EntityType.VINDICATOR, 100, 4, 9));
 
     // @Override
     // public List<MobSpawnInfo.Spawners> getDefaultSpawnList() {
-    //     return STRUCTURE_MONSTERS;
+    // return STRUCTURE_MONSTERS;
     // }
 
-    // private static final List<MobSpawnInfo.Spawners> STRUCTURE_CREATURES = ImmutableList.of(
-    //         new MobSpawnInfo.Spawners(EntityType.SHEEP, 30, 10, 15),
-    //         new MobSpawnInfo.Spawners(EntityType.RABBIT, 100, 1, 2));
+    // private static final List<MobSpawnInfo.Spawners> STRUCTURE_CREATURES =
+    // ImmutableList.of(
+    // new MobSpawnInfo.Spawners(EntityType.SHEEP, 30, 10, 15),
+    // new MobSpawnInfo.Spawners(EntityType.RABBIT, 100, 1, 2));
 
     // @Override
     // public List<MobSpawnInfo.Spawners> getDefaultCreatureSpawnList() {
-    //     return STRUCTURE_CREATURES;
+    // return STRUCTURE_CREATURES;
     // }
-
 
     @Override
     protected boolean isFeatureChunk(ChunkGenerator chunkGenerator, BiomeProvider biomeSource, long seed,
@@ -125,19 +126,20 @@ public class ChatrcStructure extends Structure<NoFeatureConfig> {
         // itself which you can test.
         BlockState topBlock = columnOfBlocks.getBlockState(centerOfChunk.above(landHeight));
 
-        // Now we test to make sure our structure is not spawning on water or other
-        // fluids.
-        // You can do height check instead too to make it spawn at high elevations.
-
-        for (Biome biome1 : biomeSource.getBiomesWithin(chunkX * 16 + 9, chunkGenerator.getSeaLevel(), chunkZ * 16 + 9, 29)) {
-            if (biome1.getBiomeCategory() != Biome.Category.FOREST 
-                && biome1.getBiomeCategory() != Biome.Category.EXTREME_HILLS
-                && biome1.getBiomeCategory() != Biome.Category.TAIGA) {
+        for (Biome biome1 : biomeSource.getBiomesWithin(chunkX * 16 + 9, chunkGenerator.getSeaLevel(), chunkZ * 16 + 9,
+                29)) {
+            if (biome1.getBiomeCategory() != Biome.Category.EXTREME_HILLS
+                    && biome1.getBiomeCategory() != Biome.Category.JUNGLE
+                    && biome1.getBiomeCategory() != Biome.Category.MESA
+                    && biome1.getBiomeCategory() != Biome.Category.FOREST) {
                 return false;
             }
         }
-
-        return topBlock.getFluidState().isEmpty(); // landHeight > 100;
+        // Now we test to make sure our structure is not spawning on water or other
+        // fluids.
+        // You can do height check instead too to make it spawn at high elevations.
+        return topBlock.getFluidState().isEmpty();// && ModStructures.CHATRC_BIOMES.contains(biome.toString()); //
+                                                  // landHeight > 100;
     }
 
     /**
@@ -197,7 +199,7 @@ public class ChatrcStructure extends Structure<NoFeatureConfig> {
                             // "data/<modid>/worldgen/template_pool/<the path to the pool here>"
                             // because the game automatically will check in worldgen/template_pool for the
                             // pools.
-                            .get(new ResourceLocation(HorehronCraft.MOD_ID, "chatrc/start_pool")),
+                            .get(new ResourceLocation(HorehronCraft.MOD_ID, "osada/start_pool")),
 
                             // How many pieces outward from center can a recursive jigsaw structure spawn.
                             // Our structure is only 1 piece outward and isn't recursive so any value of 1

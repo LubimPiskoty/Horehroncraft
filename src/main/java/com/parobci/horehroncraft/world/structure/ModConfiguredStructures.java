@@ -22,6 +22,9 @@ public class ModConfiguredStructures {
 
     public static StructureFeature<?, ?> CONFIGURED_NORA = ModStructures.NORA.get()
             .configured(IFeatureConfig.NONE);
+
+    public static StructureFeature<?, ?> CONFIGURED_OSADA = ModStructures.OSADA.get()
+            .configured(IFeatureConfig.NONE);
     // public static StructureFeature<?, ?> CONFIGURED_RUN_DOWN_HOUSE = ModStructures.RUN_DOWN_HOUSE.get()
     //         .configured(IFeatureConfig.NONE);
 
@@ -43,6 +46,9 @@ public class ModConfiguredStructures {
 
         Registry.register(registry, new ResourceLocation(HorehronCraft.MOD_ID, "configured_nora"),
                 CONFIGURED_NORA);
+
+        Registry.register(registry, new ResourceLocation(HorehronCraft.MOD_ID, "configured_osada"),
+                CONFIGURED_OSADA);
         // Registry.register(registry, new ResourceLocation(HorehronCraft.MOD_ID, "configured_run_down_house"),
         //         CONFIGURED_RUN_DOWN_HOUSE);
 
@@ -72,6 +78,7 @@ public class ModConfiguredStructures {
          */
         FlatGenerationSettings.STRUCTURE_FEATURES.put(ModStructures.CHATRC.get(), CONFIGURED_CHATRC);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(ModStructures.NORA.get(), CONFIGURED_NORA);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(ModStructures.NORA.get(), CONFIGURED_OSADA);
         // FlatGenerationSettings.STRUCTURE_FEATURES.put(ModStructures.RUN_DOWN_HOUSE.get(), CONFIGURED_RUN_DOWN_HOUSE);
     }
 }

@@ -14,6 +14,7 @@ import com.google.common.collect.ImmutableSet;
 import com.parobci.horehroncraft.HorehronCraft;
 import com.parobci.horehroncraft.world.structure.structures.ChatrcStructure;
 import com.parobci.horehroncraft.world.structure.structures.NoraStructure;
+import com.parobci.horehroncraft.world.structure.structures.OsadaStructure;
 
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -41,6 +42,9 @@ public class ModStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> NORA = DEFERRED_REGISTRY_STRUCTURE
             .register("nora", () -> (new NoraStructure(NoFeatureConfig.CODEC)));
 
+    public static final RegistryObject<Structure<NoFeatureConfig>> OSADA = DEFERRED_REGISTRY_STRUCTURE
+            .register("osada", () -> (new OsadaStructure(NoFeatureConfig.CODEC)));
+
     // public static final RegistryObject<Structure<NoFeatureConfig>> RUN_DOWN_HOUSE
     // = DEFERRED_REGISTRY_STRUCTURE
     // .register("run_down_house", () -> (new
@@ -62,6 +66,13 @@ public class ModStructures {
                 NORA.get(),
                 new StructureSeparationSettings(40,
                         20,
+                        1234567890),
+                true);
+
+        setupMapSpacingAndLand(
+                OSADA.get(),
+                new StructureSeparationSettings(80,
+                        40,
                         1234567890),
                 true);
 

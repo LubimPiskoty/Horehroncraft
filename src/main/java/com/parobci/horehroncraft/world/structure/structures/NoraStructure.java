@@ -103,41 +103,6 @@ public class NoraStructure extends Structure<NoFeatureConfig> {
     //     return STRUCTURE_CREATURES;
     // }
 
-    /*
-     * This is where extra checks can be done to determine if the structure can
-     * spawn here.
-     * This only needs to be overridden if you're adding additional spawn
-     * conditions.
-     *
-     * Fun fact, if you set your structure separation/spacing to be 0/1, you can use
-     * isFeatureChunk to return true only if certain chunk coordinates are passed in
-     * which allows you to spawn structures only at certain coordinates in the
-     * world.
-     *
-     * Notice how the biome is also passed in. Though, you are not going to
-     * do any biome checking here as you should've added this structure to
-     * the biomes you wanted already with the biome load event.
-     * 
-     * Basically, this method is used for determining if the land is at a suitable
-     * height,
-     * if certain other structures are too close or not, or some other restrictive
-     * condition.
-     *
-     * For example, Pillager Outposts added a check to make sure it cannot spawn
-     * within 10 chunk of a Village.
-     * (Bedrock Edition seems to not have the same check)
-     * 
-     * 
-     * Also, please for the love of god, do not do dimension checking here. If you
-     * do and
-     * another mod's dimension is trying to spawn your structure, the locate
-     * command will make minecraft hang forever and break the game.
-     *
-     * Instead, use the addDimensionalSpacing method in StructureTutorialMain class.
-     * If you check for the dimension there and do not add your structure's
-     * spacing into the chunk generator, the structure will not spawn in that
-     * dimension!
-     */
     @Override
     protected boolean isFeatureChunk(ChunkGenerator chunkGenerator, BiomeProvider biomeSource, long seed,
             SharedSeedRandom chunkRandom, int chunkX, int chunkZ, Biome biome, ChunkPos chunkPos,

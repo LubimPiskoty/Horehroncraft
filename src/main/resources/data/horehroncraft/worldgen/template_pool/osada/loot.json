@@ -1,0 +1,26 @@
+{
+    "name": "horehroncraft:osada/loot",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 10,
+            "element": {
+                "location": "horehroncraft:osada/loot_chest",
+                "processors": "minecraft:empty",
+                // terrain_matching ||rigid
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 10,
+            "element": {
+                "location": "minecraft:empty",
+                "processors": "minecraft:empty",
+                // terrain_matching ||rigid
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

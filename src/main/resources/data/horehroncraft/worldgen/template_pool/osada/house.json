@@ -1,0 +1,26 @@
+{
+    "name": "horehroncraft:osada/house",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 10,
+            "element": {
+                "location": "horehroncraft:osada/house1",
+                "processors": "minecraft:empty",
+                // terrain_matching ||rigid
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 4,
+            "element": {
+                "location": "horehroncraft:osada/terminator",
+                "processors": "minecraft:empty",
+                // terrain_matching ||rigid
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}
