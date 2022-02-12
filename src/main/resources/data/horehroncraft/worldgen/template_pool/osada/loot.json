@@ -5,7 +5,7 @@
         {
             "weight": 10,
             "element": {
-                "location": "horehroncraft:osada/loot_chest",
+                "location": "horehroncraft:osada/loot/loot_chest",
                 "processors": "minecraft:empty",
                 // terrain_matching ||rigid
                 "projection": "rigid",
@@ -13,9 +13,9 @@
             }
         },
         {
-            "weight": 10,
+            "weight": 12,
             "element": {
-                "location": "minecraft:empty",
+                "location": "horehroncraft:osada/loot/loot_terminator",
                 "processors": "minecraft:empty",
                 // terrain_matching ||rigid
                 "projection": "rigid",

@@ -1,0 +1,42 @@
+{
+    "name": "horehroncraft:osada/terminators/streets",
+    "fallback": "horehroncraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "horehroncraft:osada/streets_terminators/terminator_street0",
+                "processors": "minecraft:empty",
+                "projection": "terrain_matching",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "horehroncraft:osada/streets_terminators/terminator_street1",
+                "processors": "minecraft:empty",
+                "projection": "terrain_matching",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "horehroncraft:osada/streets_terminators/terminator_street2",
+                "processors": "minecraft:empty",
+                "projection": "terrain_matching",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "horehroncraft:osada/streets_terminators/terminator_street3",
+                "processors": "minecraft:empty",
+                "projection": "terrain_matching",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

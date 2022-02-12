@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "horehroncraft:osada/crossroad1",
+        "location": "horehroncraft:osada/streets/crossroad1",
         "processors": "minecraft:empty",
         // terrain_matching ||rigid
         "projection": "terrain_matching",

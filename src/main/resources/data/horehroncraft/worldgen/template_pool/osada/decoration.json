@@ -1,0 +1,51 @@
+{
+    "name": "horehroncraft:osada/decoration",
+    "fallback": "horehroncraft:osada/terminators/decoration",
+    "elements": [
+        {
+            "weight": 5,
+            "element": {
+                "location": "horehroncraft:osada/decorations/decoration0",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 5,
+            "element": {
+                "location": "horehroncraft:osada/decorations/decoration1",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 5,
+            "element": {
+                "location": "horehroncraft:osada/decorations/decoration2",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 5,
+            "element": {
+                "location": "horehroncraft:osada/decorations/decoration3",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 5,
+            "element": {
+                "location": "horehroncraft:osada/decorations/decoration4",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

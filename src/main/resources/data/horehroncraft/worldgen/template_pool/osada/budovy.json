@@ -1,23 +1,21 @@
 {
-    "name": "horehroncraft:osada/house",
-    "fallback": "minecraft:empty",
+    "name": "horehroncraft:osada/budovy",
+    "fallback": "horehroncraft:osada/terminators/budovy",
     "elements": [
         {
             "weight": 10,
             "element": {
-                "location": "horehroncraft:osada/house1",
+                "location": "horehroncraft:osada/budovy/house1",
                 "processors": "minecraft:empty",
-                // terrain_matching ||rigid
                 "projection": "rigid",
                 "element_type": "minecraft:single_pool_element"
             }
         },
         {
-            "weight": 4,
+            "weight": 10,
             "element": {
-                "location": "horehroncraft:osada/terminator",
+                "location": "horehroncraft:osada/budovy/house2",
                 "processors": "minecraft:empty",
-                // terrain_matching ||rigid
                 "projection": "rigid",
                 "element_type": "minecraft:single_pool_element"
             }

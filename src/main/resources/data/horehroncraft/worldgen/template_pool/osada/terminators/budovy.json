@@ -1,0 +1,42 @@
+{
+    "name": "horehroncraft:osada/terminators/budovy",
+    "fallback": "horehroncraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "horehroncraft:osada/budovy_terminator/terminator_budovy0",
+                "processors": "minecraft:empty",
+                "projection": "terrain_matching",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "horehroncraft:osada/budovy_terminator/terminator_budovy1",
+                "processors": "minecraft:empty",
+                "projection": "terrain_matching",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "horehroncraft:osada/budovy_terminator/terminator_budovy2",
+                "processors": "minecraft:empty",
+                "projection": "terrain_matching",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "horehroncraft:osada/budovy_terminator/terminator_budovy3",
+                "processors": "minecraft:empty",
+                "projection": "terrain_matching",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

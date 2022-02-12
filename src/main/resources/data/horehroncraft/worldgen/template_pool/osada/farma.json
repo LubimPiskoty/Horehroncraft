@@ -1,0 +1,33 @@
+{
+    "name": "horehroncraft:osada/farma",
+    "fallback": "horehroncraft:osada/terminators/farma",
+    "elements": [
+        {
+            "weight": 4,
+            "element": {
+                "location": "horehroncraft:osada/farmy/farma0",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 4,
+            "element": {
+                "location": "horehroncraft:osada/farmy/farma1",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 4,
+            "element": {
+                "location": "horehroncraft:osada/farmy/farma2",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}
